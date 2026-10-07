@@ -12,6 +12,10 @@ impl Layer {
         self.nuerons.len()
     }
 
+    pub fn neurons(&self) -> &[Nueron] {
+        &self.nuerons
+    }
+
     pub fn output(&self, inputs: &Vec<f32>) -> Vec<f32> {
         let mut output: Vec<f32> = Vec::new();
         for n in &self.nuerons {
